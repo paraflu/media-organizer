@@ -1,3 +1,26 @@
+"""
+Prompt 
+1. Organizzazione base di foto e immagini con:
+   - Struttura anno/mese/giorno
+   - Gestione duplicati
+   - Gestione nomi file uguali
+
+2. Aggiunta supporto per file RAW digitali:
+   - Supporto per vari formati (.cr2, .nef, .arw, ecc.)
+   - Estrazione metadata specifici RAW
+   - Gestione date EXIF dei RAW
+
+3. Aggiunta supporto per file video:
+   - Supporto formati video (.mp4, .mov, .mkv, ecc.)
+   - Estrazione metadata video
+   - Creazione file info per i video
+
+4. Aggiunta funzionalità di sistema:
+   - Gestione log
+   - Argomenti da riga di comando
+   - Notifiche via ntfy.sh
+
+"""
 import os
 import shutil
 from datetime import datetime
