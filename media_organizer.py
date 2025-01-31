@@ -295,6 +295,12 @@ def organize_media(source_dir: str, destination_dir: str, logger: logging.Logger
                 new_filename = filename
                 counter = 1
                 
+                if os.path.exists(os.path.join(dest_dir, new_filename)):
+                    if file_hash == get_file_hash(os.path.join(dest_dir, new_filename)):
+                        logger.info(f"Duplicato trovato: {filename}")
+                        stats['duplicates'] += 1
+                        continue
+                    
                 while os.path.exists(os.path.join(dest_dir, new_filename)):
                     new_filename = f"{base_name}_{counter}{extension}"
                     counter += 1
